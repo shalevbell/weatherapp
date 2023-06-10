@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+    flask1:
+        build: ./flask/
+        hostname: weathersite1
+        ports:
+            - "9090"
+    flask2:
+        build: ./flask/
+        hostname: weathersite2
+        ports:
+            - "9090"
+    nginx:
+        build: ./nginx/
+        ports:
+            - "80:80"
+
